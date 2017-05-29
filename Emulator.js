@@ -26,16 +26,16 @@ WebDriver driver;
 public void setUp() throws MalformedURLException 
 {
 DesiredCapabilities capabilities= new DesiredCapabilities();
-capabilities.setCapability(CapabilityType.BROWSER_NAME,"browser");
-capabilities.setCapability(CapabilityType.VERSION,"4.4");
+capabilities.setCapability(CapabilityType.BROWSER_NAME,"Google Chrome");
+capabilities.setCapability(CapabilityType.VERSION,"4.4.4");
 capabilities.setCapability(CapabilityType.PLATFORM,"windows");
 capabilities.setCapability("platformName","Android");
 capabilities.setCapability("devices","Android");
-capabilities.setCapability("avd","nexus");
+capabilities.setCapability("avd","samsung");
 capabilities.setCapability("deviceName","");
-capabilities.setCapability("appPackage", "com.android.browser");
-capabilities.setCapability("appActivity",    "com.android.browser.BrowserActivity");
-driver=new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+capabilities.setCapability("appPackage", "com.android.googlechrome");
+capabilities.setCapability("appActivity",    "com.android.googlechrome.BrowserActivity");
+driver=new RemoteWebDriver(new URL("http://google.com"), capabilities);
 }
 
 
